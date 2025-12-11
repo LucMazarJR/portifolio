@@ -3,6 +3,7 @@
 import { MoveDown, Code2, Sparkles } from "lucide-react";
 import StatCard from "../ui/StatCard";
 import { totalProjects, totalStack } from "@/data/portfolio";
+import InformationTerminal from "../ui/InformationsTerminal";
 
 export default function HeroSection() {
   return (
@@ -79,47 +80,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Coluna Direita - Visual */}
-          <div className="relative lg:h-[600px] animate-slide-in-right">
-            {/* Card flutuante com código */}
-            <div className="relative mx-auto max-w-lg">
-              {/* Card principal */}
-              <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 shadow-2xl">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  </div>
-                  <span className="text-xs text-foreground/50 ml-2">portfolio.tsx</span>
-                </div>
-
-                <div className="font-mono text-sm space-y-2">
-                  <div>
-                    <span className="text-accent">const</span>
-                    <span className="text-foreground/80">  <span className="text-primary">developer</span> = {"{"}</span>
-                  </div>
-                  <div className="space-y-1 pl-6">
-                    <div className="text-foreground/80">name: <span className="text-green-400">&quot;Luciano Mazarão Jr&quot;</span>,</div>
-                    <div className="text-foreground/80">role: <span className="text-green-400">&quot;Full Stack&quot;</span>,</div>
-                    <div className="text-foreground/80">passion: <span className="text-green-400">&quot;Code&quot;</span>,</div>
-                    <div className="text-foreground/80">status: <span className="text-green-400">&quot;Learning&quot;</span></div>
-                  </div>
-                  <div className="text-foreground/80">  {"}"}</div>
-                </div>
-              </div>
-
-              {/* Badge flutuante 1 */}
-              <div className="absolute -top-4 -right-4 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-xl px-4 py-2 shadow-lg animate-pulse">
-                <span className="text-sm font-medium text-primary">React</span>
-              </div>
-
-              {/* Badge flutuante 2 */}
-              <div className="absolute -bottom-4 -left-4 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-xl px-4 py-2 shadow-lg animate-pulse delay-500">
-                <span className="text-sm font-medium text-accent">TypeScript</span>
-              </div>
-            </div>
-          </div>
+          <InformationTerminal/>
         </div>
 
         {/* Indicador de scroll */}
