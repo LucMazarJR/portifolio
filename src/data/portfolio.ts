@@ -17,6 +17,9 @@ export const techStack = {
   other: ["REST API", "GraphQL", "Jest", "CI/CD"],
 };
 
+// Quantidade de tecnologias
+export const totalStack: number = Object.values(techStack).reduce((acc, arr) => acc + arr.length, 0);
+
 // Projetos em destaque
 export const projects: Project[] = [
   {
@@ -48,6 +51,8 @@ export const projects: Project[] = [
     featured: true,
   },
 ];
+
+export const totalProjects: number = projects.length;
 
 // Experiência profissional
 export const experiences: Experience[] = [

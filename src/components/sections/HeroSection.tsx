@@ -1,6 +1,8 @@
 "use client";
 
 import { MoveDown, Code2, Sparkles } from "lucide-react";
+import StatCard from "../ui/StatCard";
+import { totalProjects, totalStack } from "@/data/portfolio";
 
 export default function HeroSection() {
   return (
@@ -42,8 +44,8 @@ export default function HeroSection() {
             {/* Descrição */}
             <p className="text-lg text-foreground/60 leading-relaxed max-w-xl">
               Estudante de Engenharia de Software no 5° semestre, transformando
-              <span className="text-primary font-medium"> ideias </span> em 
-              <span className="text-primary font-medium"> experiências digitais</span> através 
+              <span className="text-primary font-medium"> ideias </span> em
+              <span className="text-primary font-medium"> experiências digitais</span> através
               de código limpo e criativo.
             </p>
 
@@ -71,18 +73,9 @@ export default function HeroSection() {
 
             {/* Stats rápidas */}
             <div className="flex gap-8 pt-8 border-t border-border/50">
-              <div>
-                <div className="text-2xl font-bold text-primary">5+</div>
-                <div className="text-sm text-foreground/50">Tecnologias</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-accent">10+</div>
-                <div className="text-sm text-foreground/50">Projetos</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-primary">2024</div>
-                <div className="text-sm text-foreground/50">Ano de Início</div>
-              </div>
+              <StatCard data={totalStack} type="Tecnologias" color={1} reference="#tecnologias"></StatCard>
+              <StatCard data={totalProjects} type="Projetos" color={2} reference="#projetos"></StatCard>
+              <StatCard value={2024} type="Ano de Inicio" color={1}></StatCard>
             </div>
           </div>
 
@@ -107,7 +100,7 @@ export default function HeroSection() {
                     <span className="text-foreground/80">  <span className="text-primary">developer</span> = {"{"}</span>
                   </div>
                   <div className="space-y-1 pl-6">
-                    <div className="text-foreground/80">name: <span className="text-green-400">&quot;Luciano&quot;</span>,</div>
+                    <div className="text-foreground/80">name: <span className="text-green-400">&quot;Luciano Mazarão Jr&quot;</span>,</div>
                     <div className="text-foreground/80">role: <span className="text-green-400">&quot;Full Stack&quot;</span>,</div>
                     <div className="text-foreground/80">passion: <span className="text-green-400">&quot;Code&quot;</span>,</div>
                     <div className="text-foreground/80">status: <span className="text-green-400">&quot;Learning&quot;</span></div>
