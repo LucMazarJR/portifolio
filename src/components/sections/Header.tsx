@@ -18,6 +18,7 @@ export default function Header() {
   }, []);
 
   const navLinks = [
+    { href: "#", label: "Início" },
     { href: "#sobre", label: "Sobre" },
     { href: "#tecnologias", label: "Tecnologias" },
     { href: "#projetos", label: "Projetos" },
