@@ -4,7 +4,7 @@ import { Project, Experience, Education, Course, ContactInfo } from '@/types';
 export const profileData = {
   name: "Seu Nome",
   title: "Desenvolvedor Full Stack",
-  subtitle: "Especialista em React, Next.js e Node.js",
+  subtitle: "Transformando ideias em soluções digitais inovadoras através de código limpo e arquitetura escalável",
   bio: "Desenvolvedor apaixonado por criar soluções elegantes e eficientes. Com experiência em desenvolvimento web moderno, foco em performance e experiência do usuário.",
   image: "/profile.jpg", // Adicione sua foto em public/
 };
