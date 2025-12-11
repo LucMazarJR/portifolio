@@ -1,6 +1,7 @@
 "use client";
 
 import { experiences } from "@/data/portfolio";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const ExperienceCard = ({ experience }: { experience: typeof experiences[0] }) => (
   <div className="relative pl-8 pb-12 last:pb-0">
@@ -50,10 +51,11 @@ export default function ExperienceSection() {
   return (
     <section id="experiencia" className="py-20 lg:py-32 bg-secondary/50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-sm font-semibold text-primary uppercase tracking-wider">
-            Trajetória
-          </h2>
+        <ScrollReveal animation="fade-up">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-sm font-semibold text-primary uppercase tracking-wider">
+              Trajetória
+            </h2>
           <h3 className="text-4xl lg:text-5xl font-bold">
             Experiência{" "}
             <span className="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -63,11 +65,14 @@ export default function ExperienceSection() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Minha jornada profissional no desenvolvimento de software
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
         <div className="relative">
-          {experiences.map((experience) => (
-            <ExperienceCard key={experience.id} experience={experience} />
+          {experiences.map((experience, index) => (
+            <ScrollReveal key={experience.id} animation="fade-up" delay={index * 150}>
+              <ExperienceCard experience={experience} />
+            </ScrollReveal>
           ))}
         </div>
       </div>

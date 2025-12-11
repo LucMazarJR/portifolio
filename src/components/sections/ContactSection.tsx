@@ -1,15 +1,17 @@
 "use client";
 
 import { contactInfo } from "@/data/portfolio";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ContactSection() {
   return (
     <section id="contato" className="py-20 lg:py-32 bg-secondary/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-sm font-semibold text-primary uppercase tracking-wider">
-            Vamos Conversar
-          </h2>
+        <ScrollReveal animation="fade-up">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-sm font-semibold text-primary uppercase tracking-wider">
+              Vamos Conversar
+            </h2>
           <h3 className="text-4xl lg:text-5xl font-bold">
             Entre em{" "}
             <span className="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -19,9 +21,11 @@ export default function ContactSection() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Estou disponível para novos projetos e oportunidades. Vamos trabalhar juntos!
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <ScrollReveal animation="fade-up" delay={100}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Email */}
           <a
             href={`mailto:${contactInfo.email}`}
@@ -51,12 +55,14 @@ export default function ContactSection() {
               <p className="text-muted-foreground">{contactInfo.location}</p>
             </div>
           </div>
-        </div>
+          </div>
+        </ScrollReveal>
 
         {/* Redes Sociais */}
-        <div className="flex flex-col items-center gap-6">
-          <p className="text-muted-foreground">Ou me encontre nas redes sociais</p>
-          <div className="flex gap-4">
+        <ScrollReveal animation="fade-up" delay={200}>
+          <div className="flex flex-col items-center gap-6">
+            <p className="text-muted-foreground">Ou me encontre nas redes sociais</p>
+            <div className="flex gap-4">
             {contactInfo.socials.map((social) => (
               <a
                 key={social.name}
@@ -84,7 +90,8 @@ export default function ContactSection() {
               </a>
             ))}
           </div>
-        </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

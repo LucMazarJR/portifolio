@@ -1,6 +1,7 @@
 "use client";
 
 import { projects } from "@/data/portfolio";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const ProjectCard = ({ project }: { project: typeof projects[0] }) => (
   <div className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary transition-all hover:shadow-2xl hover:shadow-primary/20">
@@ -68,11 +69,12 @@ export default function ProjectsSection() {
   return (
     <section id="projetos" className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-sm font-semibold text-primary uppercase tracking-wider">
-            Portfólio
-          </h2>
-          <h3 className="text-4xl lg:text-5xl font-bold">
+        <ScrollReveal animation="fade-up">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-sm font-semibold text-primary uppercase tracking-wider">
+              Portfólio
+            </h2>
+            <h3 className="text-4xl lg:text-5xl font-bold">
             Projetos em{" "}
             <span className="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">
               Destaque
@@ -81,11 +83,14 @@ export default function ProjectsSection() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Alguns dos projetos que desenvolvi, demonstrando minhas habilidades técnicas
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {projects.map((project, index) => (
+            <ScrollReveal key={project.id} animation="fade-up" delay={index * 100}>
+              <ProjectCard project={project} />
+            </ScrollReveal>
           ))}
         </div>
 

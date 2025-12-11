@@ -1,14 +1,23 @@
 "use client";
 
 import { profileData } from "@/data/portfolio";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function AboutSection() {
+  const imageAnimation = useScrollAnimation();
+  const contentAnimation = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <section id="sobre" className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Imagem */}
-          <div className="relative animate-slide-in-left">
+          <div
+            ref={imageAnimation.ref}
+            className={`relative scroll-animate scroll-fade-left ${
+              imageAnimation.isVisible ? "is-visible" : ""
+            }`}
+          >
             <div className="relative w-full max-w-md mx-auto lg:mx-0">
               {/* Placeholder para imagem */}
               <div className="aspect-square rounded-2xl bg-linear-to-br from-primary/20 to-accent/20 border-2 border-border overflow-hidden">
@@ -34,7 +43,12 @@ export default function AboutSection() {
           </div>
 
           {/* Conteúdo */}
-          <div className="space-y-6 animate-slide-in-right">
+          <div
+            ref={contentAnimation.ref}
+            className={`space-y-6 scroll-animate scroll-fade-right ${
+              contentAnimation.isVisible ? "is-visible" : ""
+            }`}
+          >
             <div className="space-y-4">
               <h2 className="text-sm font-semibold text-primary uppercase tracking-wider">
                 Sobre Mim
