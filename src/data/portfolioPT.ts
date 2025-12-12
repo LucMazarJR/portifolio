@@ -24,30 +24,33 @@ export const totalStack: number = Object.values(techStack).reduce((acc, arr) => 
 export const projects: Project[] = [
   {
     id: "1",
-    title: "E-commerce Moderno",
-    description: "Plataforma completa de e-commerce com painel administrativo, gerenciamento de produtos e checkout integrado.",
-    image: "/projects/ecommerce.jpg",
-    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe"],
-    github: "https://github.com/seu-usuario/projeto",
-    demo: "https://projeto-demo.vercel.app",
+    title: "Apojobs - Tic 2025",
+    description: "A Apojobs é uma plataforma desenvolvida para promover a inclusão profissional de pessoas com deficiência, conectando candidatos e empresas. Conta com cadastro acessível, mapeamento de barreiras e ferramentas administrativas para acompanhar métricas de inclusão. Criada no TIC da UniFACEF, utiliza tecnologias modernas para entregar uma experiência intuitiva e funcional.",
+    image: "/images/projects/1.jpg",
+    technologies: ["React.js", "TypeScript", "Node", "Express", "PostgreSQL", "Prisma"],
+    github: {
+      frontend: "https://github.com/LucMazarJR/tic-2025-front",
+      backend: "https://github.com/LucMazarJR/tic-2025-back"
+    },
+    demo: "https://apojobs.vercel.app/",
     featured: true,
   },
   {
     id: "2",
-    title: "Dashboard Analytics",
-    description: "Dashboard interativo com visualização de dados em tempo real e relatórios personalizados.",
-    image: "/projects/dashboard.jpg",
-    technologies: ["React", "Chart.js", "Node.js", "MongoDB"],
-    github: "https://github.com/seu-usuario/projeto",
+    title: "MedBot - Hackathon 2025",
+    description: "O Medbot é um mini assistente virtual de saúde desenvolvido em hackathon, criado para oferecer respostas rápidas e acessíveis sobre cuidados básicos por meio de um chatbot intuitivo e funcional.",
+    image: "/images/projects/2.png",
+    technologies: ["React.js", "TypeScript", "Node", "Express", "PostgreSQL", "Prisma", "OpenAi API"],
+    github: "https://github.com/LucMazarJR/hackathon-2025",
     featured: true,
   },
   {
     id: "3",
-    title: "API RESTful",
-    description: "API robusta com autenticação JWT, documentação Swagger e testes automatizados.",
-    image: "/projects/api.jpg",
-    technologies: ["Node.js", "Express", "PostgreSQL", "Jest"],
-    github: "https://github.com/seu-usuario/projeto",
+    title: "Xadrez Terminal",
+    description: "Projeto de um jogo de xadrez em C#, executado no terminal, permitindo partidas completas com lógica de movimentos e regras implementadas.",
+    image: "/images/projects/3.jpeg",
+    technologies: ["C#", "POO"],
+    github: "https://github.com/LucMazarJR/xadrez-console",
     featured: true,
   },
 ];
@@ -55,7 +58,6 @@ export const projects: Project[] = [
 export const totalProjects: number = projects.length;
 
 // Experiência profissional
-// Adicione novas experiências NO TOPO (mais recente primeiro)
 export const experiences: Experience[] = [
   {
     id: "pet-bolsista",

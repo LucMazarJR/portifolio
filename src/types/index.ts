@@ -6,7 +6,11 @@ export interface Project {
   description: string;
   image: string;
   technologies: string[];
-  github?: string;
+  github?: string | {
+    frontend?: string;
+    backend?: string;
+    mobile?: string;
+  };
   demo?: string;
   featured: boolean;
 }
