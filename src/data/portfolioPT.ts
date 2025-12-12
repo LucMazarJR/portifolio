@@ -11,10 +11,10 @@ export const profileData = {
 
 // Stack tecnológica
 export const techStack = {
-  frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"],
-  backend: ["Node.js", "Express", "NestJS", "PostgreSQL", "MongoDB", "Prisma"],
-  tools: ["Git", "Docker", "VS Code", "Figma", "Postman"],
-  other: ["REST API", "GraphQL", "Jest", "CI/CD"],
+  frontend: ["React", "Next.js", "JavaSript", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"],
+  backend: ["Java", "Spring Boot", "Node.js", "Express.js", "Fastfiy.js", "Python", "C#", "Prisma", "MySQL", "PostgreSQL", "Oracle Database"],
+  tools: ["Git", "Github", "Figma", "Azure", "AWS", "Oracle Clouding"],
+  other: ["REST API"],
 };
 
 // Quantidade de tecnologias
