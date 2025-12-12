@@ -1,6 +1,6 @@
 "use client";
 
-import { profileData } from "@/data/portfolio";
+import { profileData } from "@/data/portfolioPT";
 import Image from "next/image";
 import ScrollReveal from "../ui/ScrollReveal";
 

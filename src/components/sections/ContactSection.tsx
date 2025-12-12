@@ -1,6 +1,6 @@
 "use client";
 
-import { contactInfo } from "@/data/portfolio";
+import { contactInfo } from "@/data/portfolioPT";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ContactSection() {

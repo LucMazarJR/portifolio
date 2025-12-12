@@ -1,6 +1,6 @@
 "use client";
 
-import { contactInfo } from "@/data/portfolio";
+import { contactInfo } from "@/data/portfolioPT";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

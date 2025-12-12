@@ -1,6 +1,6 @@
 "use client";
 
-import { education, courses } from "@/data/portfolio";
+import { education, courses } from "@/data/portfolioPT";
 
 const EducationCard = ({ item }: { item: typeof education[0] }) => (
   <div className="bg-card border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/10">

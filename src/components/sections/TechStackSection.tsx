@@ -1,6 +1,6 @@
 "use client";
 
-import { techStack } from "@/data/portfolio";
+import { techStack } from "@/data/portfolioPT";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const TechBadge = ({ name }: { name: string }) => (

@@ -2,7 +2,7 @@
 
 import { MoveDown, Code2, Sparkles } from "lucide-react";
 import StatCard from "../ui/StatCard";
-import { totalProjects, totalStack } from "@/data/portfolio";
+import { totalProjects, totalStack } from "@/data/portfolioPT";
 import InformationTerminal from "../ui/InformationsTerminal";
 
 export default function HeroSection() {

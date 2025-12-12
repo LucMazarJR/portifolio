@@ -1,6 +1,6 @@
 "use client";
 
-import { projects } from "@/data/portfolio";
+import { projects } from "@/data/portfolioPT";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const ProjectCard = ({ project }: { project: typeof projects[0] }) => (

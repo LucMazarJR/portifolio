@@ -1,6 +1,6 @@
 "use client";
 
-import { experiences } from "@/data/portfolio";
+import { experiences } from "@/data/portfolioPT";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const ExperienceCard = ({ experience }: { experience: typeof experiences[0] }) => (
