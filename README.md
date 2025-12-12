@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💼 Portfólio Pessoal
 
-## Getting Started
+Portfólio profissional desenvolvido com Next.js 15, TypeScript e Tailwind CSS. Apresenta projetos, experiências, stack tecnológica e informações de contato.
 
-First, run the development server:
+## 🚀 Tecnologias
+
+- **Next.js 15** - Framework React com App Router
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização com utility-first
+- **Lucide React** - Ícones modernos
+- **React Icons** - Biblioteca de ícones complementar
+
+## ✨ Funcionalidades
+
+- ✅ Design responsivo e moderno
+- ✅ Animações suaves com scroll reveal
+- ✅ Terminal interativo com múltiplas linguagens
+- ✅ Seções: Hero, Sobre, Stack, Projetos, Experiência, Educação, Contato
+- ✅ Suporte para múltiplos repositórios GitHub por projeto
+- ✅ Dark mode otimizado
+- ✅ Performance otimizada com Next.js Image
+
+## 🛠️ Instalação
 
 ```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/portifolio.git
+
+# Entre na pasta
+cd portifolio
+
+# Instale as dependências
+npm install
+
+# Execute em desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/              # App Router (Next.js 15)
+├── components/       # Componentes React
+│   ├── sections/    # Seções da página
+│   └── ui/          # Componentes reutilizáveis
+├── data/            # Dados do portfólio (PT)
+├── hooks/           # Custom hooks
+└── types/           # TypeScript types
+```
 
-## Learn More
+## 📝 Personalização
 
-To learn more about Next.js, take a look at the following resources:
+Edite os dados em `src/data/portfolioPT.ts`:
+- Informações pessoais
+- Projetos
+- Experiências profissionais
+- Educação e cursos
+- Stack tecnológica
+- Links de contato
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Customização de Estilos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+As cores e temas podem ser ajustados em:
+- `tailwind.config.ts` - Cores, fontes e tema
+- `src/app/globals.css` - Variáveis CSS e animações
 
-## Deploy on Vercel
+## 🌐 Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O projeto está configurado para deploy na Vercel:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/seu-usuario/portifolio)
+
+### Branches:
+- `main` - Produção (deploy automático)
+- `develop` - Desenvolvimento (preview)
+
+## 📄 Licença
+
+Este projeto é de código aberto para fins educacionais.
