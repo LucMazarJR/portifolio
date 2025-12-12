@@ -55,31 +55,24 @@ export const projects: Project[] = [
 export const totalProjects: number = projects.length;
 
 // Experiência profissional
+// Adicione novas experiências NO TOPO (mais recente primeiro)
 export const experiences: Experience[] = [
   {
-    id: "1",
-    company: "Tech Company",
-    position: "Desenvolvedor Full Stack",
-    period: "2023 - Presente",
-    description: "Desenvolvimento de aplicações web escaláveis utilizando React e Node.js. Implementação de arquitetura de microsserviços e otimização de performance.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Docker"],
+    id: "pet-bolsista",
+    company: "Ministério da Saúde",
+    position: "Bolsista PET-Saúde",
+    period: "08/2025 - Presente",
+    description: "Atuo como bolsista no PET-Saúde desenvolvendo soluções em IA para a área da saúde, incluindo pesquisa e criação de um chatbot inteligente.",
+    technologies: [],
   },
   {
-    id: "2",
-    company: "Startup XYZ",
-    position: "Desenvolvedor Front-end",
-    period: "2021 - 2023",
-    description: "Criação de interfaces responsivas e acessíveis. Colaboração com designers e implementação de testes automatizados.",
-    technologies: ["React", "TypeScript", "Jest", "Tailwind CSS"],
-  },
-  {
-    id: "3",
-    company: "Agência Digital",
-    position: "Desenvolvedor Junior",
-    period: "2020 - 2021",
-    description: "Desenvolvimento de landing pages e sites institucionais. Manutenção de projetos legados e implementação de novas features.",
-    technologies: ["JavaScript", "HTML", "CSS", "WordPress"],
-  },
+    id: "facef-estagio",
+    company: "Uni-FACEF",
+    position: "Estagiario de Suporte em TI",
+    period: "07/2025 - Presente",
+    description: "Responsável pelo suporte técnico na Uni-FACEF, realizando manutenção, configuração de sistemas e garantindo o funcionamento da infraestrutura de TI.",
+    technologies: [],
+  }
 ];
 
 // Formação acadêmica
@@ -134,24 +127,19 @@ export const courses: Course[] = [
 
 // Informações de contato
 export const contactInfo: ContactInfo = {
-  email: "seu.email@exemplo.com",
+  email: "lmazaraojr@gmail.com",
   phone: "Disponível via LinkedIn",
-  location: "São Paulo, Brasil",
+  location: "Franca, SP",
   socials: [
     {
       name: "GitHub",
-      url: "https://github.com/seu-usuario",
+      url: "https://github.com/LucMazarJR",
       icon: "github",
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/seu-perfil",
+      url: "https://www.linkedin.com/in/luciano-mazarao-jr-264a342ba/",
       icon: "linkedin",
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/seu-usuario",
-      icon: "twitter",
     },
   ],
 };

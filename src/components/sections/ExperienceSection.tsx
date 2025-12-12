@@ -4,7 +4,7 @@ import { experiences } from "@/data/portfolioPT";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const ExperienceCard = ({ experience }: { experience: typeof experiences[0] }) => (
-  <div className="relative pl-8 pb-12 last:pb-0">
+  <div className="relative pl-8 pt-2 last:pb-0">
     {/* Linha vertical */}
     <div className="absolute left-0 top-0 bottom-0 w-px bg-border"></div>
     
@@ -69,7 +69,7 @@ export default function ExperienceSection() {
         </ScrollReveal>
 
         <div className="relative">
-          {experiences.map((experience, index) => (
+          {[...experiences].reverse().map((experience, index) => (
             <ScrollReveal key={experience.id} animation="fade-up" delay={index * 150}>
               <ExperienceCard experience={experience} />
             </ScrollReveal>
