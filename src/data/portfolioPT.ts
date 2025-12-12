@@ -1,12 +1,12 @@
-import { Project, Experience, Education, Course, ContactInfo } from '@/types';
+import { Project, Experience, Education, Course, ContactInfo, Award } from '@/types';
 
 // Dados do perfil
 export const profileData = {
-  name: "Seu Nome",
+  name: "Luciano Mazarão Jr",
   title: "Desenvolvedor Full Stack",
   subtitle: "Transformando ideias em soluções digitais inovadoras através de código limpo e arquitetura escalável",
   bio: "Desenvolvedor apaixonado por criar soluções elegantes e eficientes. Com experiência em desenvolvimento web moderno, foco em performance e experiência do usuário.",
-  image: "/profile.jpg", // Adicione sua foto em public/
+  image: "/perfilImage.png",
 };
 
 // Stack tecnológica
@@ -81,49 +81,64 @@ export const experiences: Experience[] = [
 export const education: Education[] = [
   {
     id: "1",
-    institution: "Universidade Federal",
+    institution: "Uni-FACEF",
     degree: "Bacharelado",
-    field: "Ciência da Computação",
-    period: "2018 - 2022",
-    description: "Foco em desenvolvimento de software, estruturas de dados e algoritmos.",
-  },
-  {
-    id: "2",
-    institution: "Escola Técnica",
-    degree: "Técnico",
-    field: "Informática",
-    period: "2015 - 2017",
-    description: "Fundamentos de programação e desenvolvimento web.",
+    field: "Engenharia de Software",
+    period: "2024 - 2027",
+    description: "Formação voltada para desenvolvimento de sistemas escaláveis e arquitetura de software, com ênfase em metodologias ágeis, padrões de projeto, engenharia de requisitos e boas práticas de desenvolvimento. Experiência prática em projetos interdisciplinares aplicando tecnologias modernas.",
   },
 ];
 
 // Cursos e certificações
 export const courses: Course[] = [
   {
-    id: "1",
-    name: "Advanced React Patterns",
-    institution: "Udemy",
+    id: "course-node-apis-2025",
+    name: "Criando APIs com Node.js",
+    institution: "DIO - 8h",
+    date: "Agosto 2025",
+  },
+  {
+    id: "course-oracle-database-2025",
+    name: "Database Design",
+    institution: "Oracle Academy",
+    date: "Julho 2025",
+  },
+  {
+    id: "course-azure-2025",
+    name: "Microsoft 50 Anos - Computação em Nuvem com Azure",
+    institution: "DIO - 15h",
+    date: "Junho 2025",
+  },
+  {
+    id: "course-csharp-2025",
+    name: "C# COMPLETO - Programação Orientada a Objetos + Projetos",
+    institution: "Udemy - 38h",
+    date: "Maio 2025",
+  },
+];
+
+// Reconhecimentos e Prêmios
+export const awards: Award[] = [
+  {
+    id: "award-tic-2025",
+    title: "3º Lugar - Trabalho Interdisciplinar de Computação",
+    issuer: "Uni-FACEF",
+    date: "2025",
+    description: "Projeto Apojobs desenvolvido ao longo do ano letivo, plataforma focada em inclusão profissional de pessoas com deficiência, conquistando 3º lugar no ranking final",
+  },
+  {
+    id: "programming-marathon-2024",
+    title: "1º Lugar - Maratona de Programação",
+    issuer: "Uni-FACEF",
     date: "2024",
-    certificate: "https://certificate-url.com",
+    description: "Conquista do primeiro lugar resolvendo problemas de programação com foco em menor tempo de execução e máxima acertividade",
   },
   {
-    id: "2",
-    name: "Node.js Masterclass",
-    institution: "Rocketseat",
-    date: "2023",
-    certificate: "https://certificate-url.com",
-  },
-  {
-    id: "3",
-    name: "TypeScript: Do Zero ao Avançado",
-    institution: "Alura",
-    date: "2023",
-  },
-  {
-    id: "4",
-    name: "Docker para Desenvolvedores",
-    institution: "Udemy",
-    date: "2022",
+    id: "biggest-score-2024",
+    title: "3º Maior Média Geral da Turma 1° Semestre",
+    issuer: "Uni-FACEF",
+    date: "2024",
+    description: "Reconhecimento pelo desempenho acadêmico consistente ao longo do primeiro semestre",
   },
 ];
 
