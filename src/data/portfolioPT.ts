@@ -1,12 +1,12 @@
-import { Project, Experience, Education, Course, ContactInfo } from '@/types';
+import { Project, Experience, Education, Course, ContactInfo, Award } from '@/types';
 
 // Dados do perfil
 export const profileData = {
-  name: "Seu Nome",
+  name: "Luciano Mazarão Jr",
   title: "Desenvolvedor Full Stack",
   subtitle: "Transformando ideias em soluções digitais inovadoras através de código limpo e arquitetura escalável",
   bio: "Desenvolvedor apaixonado por criar soluções elegantes e eficientes. Com experiência em desenvolvimento web moderno, foco em performance e experiência do usuário.",
-  image: "/profile.jpg", // Adicione sua foto em public/
+  image: "/perfilImage.png",
 };
 
 // Stack tecnológica
@@ -81,19 +81,11 @@ export const experiences: Experience[] = [
 export const education: Education[] = [
   {
     id: "1",
-    institution: "Universidade Federal",
+    institution: "Uni-FACEF",
     degree: "Bacharelado",
     field: "Ciência da Computação",
     period: "2018 - 2022",
     description: "Foco em desenvolvimento de software, estruturas de dados e algoritmos.",
-  },
-  {
-    id: "2",
-    institution: "Escola Técnica",
-    degree: "Técnico",
-    field: "Informática",
-    period: "2015 - 2017",
-    description: "Fundamentos de programação e desenvolvimento web.",
   },
 ];
 
@@ -124,6 +116,24 @@ export const courses: Course[] = [
     name: "Docker para Desenvolvedores",
     institution: "Udemy",
     date: "2022",
+  },
+];
+
+// Reconhecimentos e Prêmios
+export const awards: Award[] = [
+  {
+    id: "award-hackathon-2025",
+    title: "1º Lugar - Hackathon Saúde Digital",
+    issuer: "Uni-FACEF",
+    date: "2025",
+    description: "Projeto MedBot premiado como melhor solução de IA aplicada à saúde",
+  },
+  {
+    id: "award-tic-2025",
+    title: "Destaque em Inclusão Digital",
+    issuer: "Uni-FACEF - TIC",
+    date: "2025",
+    description: "Reconhecimento pelo desenvolvimento da plataforma Apojobs focada em inclusão profissional",
   },
 ];
 
