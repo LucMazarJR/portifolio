@@ -121,7 +121,7 @@ export default function InformationTerminal() {
     const [indexLanguage, setIndexLanguage] = useState(0)
     const [lastDirection, setLastDirection] = useState<'prev' | 'next'>('next')
 
-    const handleNavigate = (direction: 'prev' | 'next') => {
+    const handleNavigate = useCallback((direction: 'prev' | 'next') => {
         setLastDirection(direction)
         setIndexLanguage(prev => {
             const length = TerminalLanguages.length
@@ -129,16 +129,17 @@ export default function InformationTerminal() {
                 ? (prev - 1 + length) % length 
                 : (prev + 1) % length
         })
-    }
+    }, [])
 
     // Auto-play: avança automaticamente a cada 5 segundos
+    // Reseta o timer quando o usuário navega manualmente
     useEffect(() => {
         const interval = setInterval(() => {
             handleNavigate('next')
         }, 5000)
 
         return () => clearInterval(interval)
-    }, [])
+    }, [indexLanguage, handleNavigate])
 
     return (
         <Terminal 
