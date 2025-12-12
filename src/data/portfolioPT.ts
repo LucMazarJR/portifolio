@@ -11,7 +11,7 @@ export const profileData = {
 
 // Stack tecnológica
 export const techStack = {
-  frontend: ["React", "Next.js", "JavaSript", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"],
+  frontend: ["Next.js", "React", "JavaSript", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"],
   backend: ["Java", "Spring Boot", "Node.js", "Express.js", "Fastfiy.js", "Python", "C#", "Prisma", "MySQL", "PostgreSQL", "Oracle Database"],
   tools: ["Git", "Github", "Figma", "Azure", "AWS", "Oracle Clouding"],
   other: ["REST API"],
