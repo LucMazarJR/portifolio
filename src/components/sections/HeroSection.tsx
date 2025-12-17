@@ -47,7 +47,7 @@ export default function HeroSection() {
               Estudante de Engenharia de Software no 5° semestre, transformando
               <span className="text-primary font-medium"> ideias </span> em
               <span className="text-primary font-medium"> experiências digitais</span> através
-              de código limpo e criativo.
+              de código limpo e criativo
             </p>
 
             {/* CTAs */}
