@@ -1,47 +1,40 @@
-# Frontend Dockerfile
-FROM node:20-alpine AS base
-
-# Dependências
-FROM base AS deps
+# 1. Dependências
+FROM node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-
 COPY package.json package-lock.json* ./
 RUN npm ci
 
-# Builder
-FROM base AS builder
+# 2. Builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-ENV NEXT_TELEMETRY_DISABLED=1
-
+ENV NEXT_TELEMETRY_DISABLED 1
 RUN npm run build
 
-# Produção
-FROM base AS runner
+# 3. Runner (Imagem final leve)
+FROM node:20-alpine AS runner
 WORKDIR /app
+ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
 
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
-
+# Segurança: Criar usuário não-root
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 COPY --from=builder /app/public ./public
 
+# Configuração para o modo Standalone (o mais leve possível)
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
-
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
-
 EXPOSE 3000
+ENV PORT 3000
+ENV HOSTNAME "0.0.0.0"
 
-ENV PORT=3000
-ENV HOSTNAME="0.0.0.0"
-
+# Em modo standalone, rodamos direto o server.js gerado pelo build
 CMD ["node", "server.js"]
